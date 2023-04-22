@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlighted search Text</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+
+        }
+    
+        .container{
+            width: 90vmin;
+            background-color: #ffffff;
+            padding: 50px 40px;
+            position:absolute;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            /* border: 3px dotted blue; */
+            border-radius: 10px;
+            /* border: 2px dotted black; */
+            box-shadow: 0px 20px 35px rgba(60, 6 0, 60, 0.2);
+        }
+        .wrapper{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .wrapper input{
+            width: 100%;
+            padding: 10px 5px;
+            border-radius: 20px;
+            border: 1px solid #201d2e;
+
+        }
+        .wrapper button{
+            width: 20%;
+            color: white;
+            background-color: #201d2e;
+            cursor: pointer;
+            border-radius: 20px;
+            margin-left: 40px;
+        }
+        .container p {
+            line-height: 35px;
+            text-align: justify;
+            margin-top: 30px;
+        }
+
+        mark{
+
+            background-color: #ffd000;
+        }
+      
+    </style>
+</head>
+<body>
+    
+ <div class="container">
+    <div class="wrapper">
+        <input type="text"  id="search" placeholder="Enter Text to search">
+
+        <button id="btnn" onclick="search()">Search</button>
+
+    </div>
+    <p id="paragraph"> Search Prince Sharma code JavaScript is a dynamic computer programming language. It is lightweight and most commonly used as a part of web pages, whose implementations allow client-side script to interact with the user and make dynamic pages. It is an interpreted programming language with object-oriented capabilities.
+         ..Akash garg and prince are best friend
+    </p>
+ </div>
+
+</body>
+<script>
+    function search(){
+        let textToSearch = document.getElementById("search").value;
+        let paragraph = document.getElementById("paragraph");
+       let pattern = new RegExp(`${textToSearch}`,"gi");
+     paragraph.innerHTML = paragraph.textContent.replace(pattern,match=>`<mark>${match}</mark>`)
+    };
+    let btn = document.getElementById("btnn").addEventListener("mouseenter",function(){
+    this.style.backgroundColor="yellow";this.style.border="none";this.style.borderRadius="20px"; this.style.color="white";
+    this.style.color = "black";}); let btnn = document.getElementById("btnn").addEventListener("click",function(){
+    this.style.backgroundColor="purple"; this.style.border="none"; this.style.borderRadius="20px"
+    this.style.color="white";paragraph.backgroundColor="grey"
+ }); let javascript = document.getElementById("btnn");javascript.addEventListener("click",function(){
+    body.style.backgroundColor="red"}); this.style.borderRadius="20px"; this.style.color="white";
+    let a = Number(prompt("Enter a Number"));
+let n = Number(prompt("Enter a Number"));
+let prom = new Promise(function(succcess,fail){
+ if(a==n){ succcess("this is true statement"); }  else 
+    {  fail("this is wrong statement"); }
+})
+console.log(prom);
+</script>
+</html>
